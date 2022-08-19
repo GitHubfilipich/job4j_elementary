@@ -2,6 +2,7 @@ package ru.job4j.condition;
 
 import org.junit.Assert;
 import org.junit.Test;
+import static org.assertj.core.api.Assertions.*;
 
 public class SqAreaTest {
 
@@ -30,5 +31,14 @@ public class SqAreaTest {
         double k = 4;
         double out = SqArea.square(p, k);
         Assert.assertEquals(expected, out, 0.01);
+    }
+
+    @Test
+    public void whenP6K4Square1dot44viaAssertJ() {
+        double expected = 1.44;
+        int p = 6;
+        double k = 4;
+        double out = SqArea.square(p, k);
+        assertThat(out).isCloseTo(expected, offset(0.01));
     }
 }
