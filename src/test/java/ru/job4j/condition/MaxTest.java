@@ -31,4 +31,67 @@ class MaxTest {
         int expected = 3;
         assertThat(result).isEqualTo(expected);
     }
+
+    @Test
+    public void whenMax2To1To0Then2() {
+        int first = 2;
+        int second = 1;
+        int third = 0;
+        int result = Max.max(first, second, third);
+        int expected = 2;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    public void whenMax1To2To3Then3() {
+        int first = 1;
+        int second = 2;
+        int third = 3;
+        int result = Max.max(first, second, third);
+        int expected = 3;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    public void whenMax3To3To3Then3() {
+        int first = 3;
+        int second = 3;
+        int third = 3;
+        int result = Max.max(first, second, third);
+        int expected = 3;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    public void whenMax2To1To4To0Then4() {
+        int first = 2;
+        int second = 1;
+        int third = 4;
+        int fourth = 0;
+        int result = Max.max(first, second, third, fourth);
+        int expected = 4;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    public void whenMax1To2To3To5Then5() {
+        int first = 1;
+        int second = 2;
+        int third = 3;
+        int fourth = 5;
+        int result = Max.max(first, second, third, fourth);
+        int expected = 5;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    public void whenMax3To3To3To3Then3() {
+        int first = 3;
+        int second = 3;
+        int third = 3;
+        int fourth = 3;
+        int result = Max.max(first, second, third, fourth);
+        int expected = 3;
+        assertThat(result).isEqualTo(expected);
+    }
 }
